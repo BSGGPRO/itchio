@@ -1,9 +1,9 @@
-# itchio-downloader
+# itch-downloader
 
 itch.io 游戏下载器，Windows 免安装单文件。基于 [Wal33D/itchio-downloader](https://github.com/Wal33D/itchio-downloader)（ISC License）改的，加了个网页操作界面、链接自动识别、Cookie 注入这些，用 PyInstaller 打包。
 
-- `itchio-downloader.exe` — 普通版
-- `itchio-downloader-max.exe` — MAX 智能版（带图形界面）
+- `itch-downloader.exe` — 普通版
+- `itch-downloader-max.exe` — MAX 智能版（带图形界面）
 
 ## 用法（MAX 版）
 
