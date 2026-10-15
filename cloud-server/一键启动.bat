@@ -1,16 +1,16 @@
 @echo off
 cd /d %~dp0
-title GMDM Cloud Game Server
+title itchtools Cloud Game Server
 echo.
 echo ==============================================
-echo   GMDM Cloud Game Server
+echo   itchtools Cloud Game Server
 echo ==============================================
 echo.
 
 :: cleanup leftovers from previous run
 taskkill /f /im cloudflared.exe >nul 2>&1
-taskkill /f /im GMDMServer.exe >nul 2>&1
-taskkill /f /im GMDMUrlGetter.exe >nul 2>&1
+taskkill /f /im itchtools-server.exe >nul 2>&1
+taskkill /f /im itchtools-urlgetter.exe >nul 2>&1
 timeout /t 1 /nobreak >nul
 
 :: generate random 6-digit access code for this session
@@ -19,17 +19,17 @@ set /a "B=%random% %% 900" + 100
 set PWD=%A%%B%
 
 echo  [1/2] Starting local game server...
-start "GMDM-LocalServer" /min GMDMServer.exe 62814 %PWD%
+start "itchtools-LocalServer" /min itchtools-server.exe 62814 %PWD%
 timeout /t 2 /nobreak >nul
 echo  [2/2] Starting cloud tunnel, waiting for your link...
-start "GMDM-Tunnel" /min cmd /c "cloudflared.exe tunnel --url http://127.0.0.1:62814 --no-autoupdate > tunnel-url.log 2>&1"
+start "itchtools-Tunnel" /min cmd /c "cloudflared.exe tunnel --url http://127.0.0.1:62814 --no-autoupdate > tunnel-url.log 2>&1"
 echo.
 echo  Please wait, getting your link (up to ~60s)...
 
 set /a tries=0
 :wait
 set URL=
-GMDMUrlGetter.exe
+itchtools-urlgetter.exe
 if exist url.txt set /p URL=<url.txt
 if defined URL goto show
 set /a tries+=1
@@ -56,5 +56,5 @@ echo  Send the link to any device, enter the access code, and play.
 echo  Press any key to STOP the service and close this window.
 pause >nul
 taskkill /f /im cloudflared.exe >nul 2>&1
-taskkill /f /im GMDMServer.exe >nul 2>&1
+taskkill /f /im itchtools-server.exe >nul 2>&1
 exit

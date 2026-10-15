@@ -86,7 +86,7 @@ class GmdmServer
             try { File.AppendAllText(LOG, "[" + DateTime.Now.ToString("HH:mm:ss") + "] BIND FAIL: " + ex + "\n"); } catch { }
             return;
         }
-        Console.WriteLine("GMDM private server on port " + PORT + " root=" + ROOT);
+        Console.WriteLine("itchtools private server on port " + PORT + " root=" + ROOT);
         Thread ct = new Thread(BuildGzCache);
         ct.IsBackground = true;
         ct.Start();

@@ -7,8 +7,8 @@
 ## 文件
 
 - `server-gmdm.cs` / `geturl.cs` — 服务器和取址源码（C#）
-- `GMDMServer.exe` — 本地游戏服务器（Windows 自带 .NET）
-- `GMDMUrlGetter.exe` — 自动抓隧道地址
+- `itchtools-server.exe` — 本地游戏服务器（Windows 自带 .NET）
+- `itchtools-urlgetter.exe` — 自动抓隧道地址
 - `一键启动.bat` — 双击一键启动
 - `cloudflared.exe` — Cloudflare 官方隧道工具（Apache-2.0，Releases 里有，也可自己下载）
 
@@ -21,7 +21,7 @@
 
 ## 其他
 
-- 想要固定访问码：编辑 `一键启动.bat`，把 `GMDMServer.exe 62814 %PWD%` 里的 `%PWD%` 改成你自己的固定码；
+- 想要固定访问码：编辑 `一键启动.bat`，把 `itchtools-server.exe 62814 %PWD%` 里的 `%PWD%` 改成你自己的固定码；
 - 首次打开慢是正常的，要加载完整游戏文件，之后有缓存会快；
 - 链接和访问码别公开传播，服务器停了链接就失效；
 - 提示"找不到 py/python"就忽略，不需要 python。
