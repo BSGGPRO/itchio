@@ -1,4 +1,4 @@
-# itchio
+# itchio-toolbox
 
 itch.io 网页游戏的几个自用工具，Windows 上用。全部打包成免安装的单文件 exe，拷走就能用。
 
