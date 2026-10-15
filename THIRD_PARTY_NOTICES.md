@@ -6,7 +6,7 @@
 
 ## itchio-downloader (ISC License)
 
-`itch-downloader/` 和 `game-toolbox/` 基于 https://github.com/Wal33D/itchio-downloader 修改封装。
+`itchio-downloader/` 和 `game-toolbox/` 基于 https://github.com/Wal33D/itchio-downloader 修改封装。
 
 ```text
 # ISC License

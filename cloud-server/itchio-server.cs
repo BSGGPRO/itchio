@@ -6,12 +6,12 @@ using System.Text;
 using System.Threading;
 using System.Collections.Generic;
 
-class ItchServer
+class ItchioServer
 {
     static string ROOT = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "game");
-    static string PASSWORD = "itch2026";
+    static string PASSWORD = "itchio2026";
     static int PORT = 62814;
-    static string COOKIE = "itch_token=ok_" + (DateTime.UtcNow.Ticks / TimeSpan.TicksPerDay).ToString();
+    static string COOKIE = "itchio_token=ok_" + (DateTime.UtcNow.Ticks / TimeSpan.TicksPerDay).ToString();
 
     static string PAGE = "<!DOCTYPE html><html lang=\"zh\"><head><meta charset=\"utf-8\">" +
         "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">" +
@@ -73,7 +73,7 @@ class ItchServer
         }
     }
 
-    static string LOG = @"C:\Users\admin\AppData\Local\Temp\1\itch-server\server.log";
+    static string LOG = @"C:\Users\admin\AppData\Local\Temp\1\itchio-server\server.log";
 
     static void Main(string[] args)
     {
@@ -86,7 +86,7 @@ class ItchServer
             try { File.AppendAllText(LOG, "[" + DateTime.Now.ToString("HH:mm:ss") + "] BIND FAIL: " + ex + "\n"); } catch { }
             return;
         }
-        Console.WriteLine("itch private server on port " + PORT + " root=" + ROOT);
+        Console.WriteLine("itchio private server on port " + PORT + " root=" + ROOT);
         Thread ct = new Thread(BuildGzCache);
         ct.IsBackground = true;
         ct.Start();
