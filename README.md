@@ -12,7 +12,7 @@ itch.io 网页游戏的几个自用工具，Windows 上用。全部打包成免�
 
 ## 下载
 
-编译好的 exe 在 [Releases](https://github.com/BSGGPRO/GMDM-Tools/releases) 页。
+编译好的 exe 在 [Releases](https://github.com/BSGGPRO/itchtools/releases) 页。
 Windows 10 / 11（64 位），不需要装任何运行库。首次运行提示"未知发布者"就点"更多信息 → 仍要运行"。
 
 ## 许可证
